@@ -43,7 +43,7 @@ defmodule Slime2html.ApiControllerTest do
     """ |> String.strip
 
     response =
-      build_conn
+      conn
       |> post("/api/slime2html", slime: slime)
       |> json_response(200)
 

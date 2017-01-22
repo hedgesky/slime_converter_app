@@ -8,21 +8,26 @@ defmodule Indentifier do
     |> split("\n")
     |> Enum.filter(fn line -> trim(line) != "" end)
     |> set_levels
-    |> Enum.map(&indentify_line(&1))
-    |> Enum.join("\n")
+    |> Enum.map_join("\n", &indentify_line(&1))
   end
 
-  # @returns {result, next_level}
+  # @returns [{result, next_level}]
   defp set_levels(lines) do
-    {items, _} =
-      Enum.reduce(lines, {[], 0}, fn line, {current_items, level} ->
-        change = indentation_change(line)
+    {:ok, level_storage} = Agent.start_link(fn -> 0 end)
 
-        new_level = if change < 0, do: level + change , else: level
-        new_items = [{line, new_level} | current_items]
-        {new_items, level + change}
-      end)
-    Enum.reverse(items)
+    items = Enum.map(lines, fn line ->
+      current_level = Agent.get(level_storage, fn x -> x end)
+      change = indentation_change(line)
+      Agent.update(level_storage, fn _ -> current_level + change end)
+
+      if change < 0 do
+        {line, current_level + change}
+      else
+        {line, current_level}
+      end
+    end)
+    Agent.stop(level_storage)
+    items
   end
 
   defp indentation_change(line) do
