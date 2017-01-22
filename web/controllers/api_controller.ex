@@ -5,7 +5,8 @@ defmodule Slime2html.ApiController do
     html =
       params["slime"]
       |> String.strip
-      |> IndentingRenderer.render
+      |> Slime.render
+      |> Indentifier.indentify
 
     render conn, "slime2html.json", %{html: html}
   end

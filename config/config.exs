@@ -19,7 +19,6 @@ config :logger, :console,
   metadata: [:request_id]
 
 config :slime, :keep_lines, true
-config :slime, :beautify, true
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
