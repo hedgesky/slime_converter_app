@@ -19,8 +19,9 @@ defmodule Slime2html.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Slime2html do
-  #   pipe_through :api
-  # end
+  scope "/api", Slime2html do
+    pipe_through :api
+
+    post "/slime2html", ApiController, :slime2html
+  end
 end
