@@ -18,6 +18,7 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :slime, :keep_lines, true
 config :phoenix, :template_engines,
     slim: PhoenixSlime.Engine,
     slime: PhoenixSlime.Engine
