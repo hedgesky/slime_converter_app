@@ -8,19 +8,5 @@
     textarea#html-output
       = default_html_output()
 
+script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
 script src="#{static_path(@conn, "/js/app.js")}"
-
-javascript:
-  CodeMirror.fromTextArea(document.getElementById("slime-input"), {
-    lineNumbers: true,
-    theme: "material",
-    mode: "application/x-slim",
-    autofocus: true
-  })
-
-  CodeMirror.fromTextArea(document.getElementById("html-output"), {
-    lineNumbers: true,
-    theme: "material",
-    mode: "text/html",
-    readOnly: true
-  })
