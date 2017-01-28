@@ -1,7 +1,7 @@
 defmodule Slime2html.ApiControllerTest do
   use Slime2html.ConnCase
 
-  test "POST /api/slime2html", %{conn: conn} do
+  test "successful POST /api/slime2html", %{conn: conn} do
     slime = """
       doctype html
       html
@@ -48,5 +48,19 @@ defmodule Slime2html.ApiControllerTest do
       |> json_response(200)
 
     assert response == %{ "html" => expected_html }
+  end
+
+  test "failed POST /api/slime2html", %{conn: conn} do
+    slime = """
+      = head()
+    """
+
+    response =
+      conn
+      |> post("/api/slime2html", slime: slime)
+      |> json_response(400)
+
+    expected_error_msg = "Your template uses undefined function or variable 'head'. Please remove it."
+    assert response == %{ "error" => expected_error_msg }
   end
 end

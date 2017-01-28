@@ -32,6 +32,7 @@ defmodule Slime2html.Mixfile do
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:mix_test_watch, "~> 0.2", only: :dev, github: "lpil/mix-test.watch"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:slime, "~> 0.16"},
