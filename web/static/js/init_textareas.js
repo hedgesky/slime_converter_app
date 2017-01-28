@@ -23,7 +23,7 @@ input_mirror = CodeMirror.fromTextArea($("#slime-input").get()[0], {
 output_mirror = CodeMirror.fromTextArea($("#html-output").get()[0], {
   lineNumbers: true,
   theme: "material",
-  mode: "text/html",
+  mode: "application/x-erb",
   readOnly: true
 })
 

@@ -4,7 +4,7 @@ defmodule Indentifier do
   def indentify(html) do
     html
     |> replace("</", "\n</")
-    |> replace(">", ">\n")
+    |> replace("><%", ">\n<%") # doesn't match on ends of string
     |> split("\n")
     |> Enum.filter(fn line -> trim(line) != "" end)
     |> set_levels
@@ -34,6 +34,7 @@ defmodule Indentifier do
     cond do
       starts_with?(line, "<!DOCTYPE") -> 0
       starts_with?(line, "</") -> -1
+      starts_with?(line, "<%") -> 0
       starts_with?(line, "<") && !self_closing?(line) -> 1
       true -> 0
     end

@@ -7,16 +7,16 @@ html lang="en"
     meta name="description" content=""
     meta name="author" content=""
 
-    title Slime2html
+    title Slime2EEx
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
     link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
   body
     header.site-header.purple.darken-3
       .header-content
         h1.site-title
-          | Slime2Html
+          | Slime2EEx
         p.flow-text
-          | Convert your Slime templates to plain HTML
+          | Convert your Slime templates to EEx
     main.main.purple.lighten-3
       .page-content
         = render(@view_module, @view_template, assigns)

@@ -3,7 +3,7 @@ defmodule Translator do
     try do
       html =
         input
-        |> Slime.render
+        |> Slime.Renderer.precompile
         |> Indentifier.indentify
       { :ok, html }
     rescue

@@ -4,7 +4,7 @@
     textarea#slime-input
       = default_slime_input()
   .col.s6
-    h4.center-align.purple-text.text-darken-4 HTML output
+    h4.center-align.purple-text.text-darken-4 EEx output
     textarea#html-output
       = default_html_output()
 
