@@ -1,5 +1,5 @@
-defmodule Slime2html.ApiController do
-  use Slime2html.Web, :controller
+defmodule SlimeConverter.ApiController do
+  use SlimeConverter.Web, :controller
 
   def slime2html(conn, params) do
     {conn, json} =

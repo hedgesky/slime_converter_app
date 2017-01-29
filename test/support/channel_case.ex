@@ -1,4 +1,4 @@
-defmodule Slime2html.ChannelCase do
+defmodule SlimeConverter.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -22,7 +22,7 @@ defmodule Slime2html.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint Slime2html.Endpoint
+      @endpoint SlimeConverter.Endpoint
     end
   end
 

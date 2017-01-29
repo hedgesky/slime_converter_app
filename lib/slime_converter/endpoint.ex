@@ -1,7 +1,7 @@
-defmodule Slime2html.Endpoint do
+defmodule SlimeConverter.Endpoint do
   use Phoenix.Endpoint, otp_app: :slime2html
 
-  socket "/socket", Slime2html.UserSocket
+  socket "/socket", SlimeConverter.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +38,5 @@ defmodule Slime2html.Endpoint do
     key: "_slime2html_key",
     signing_salt: "CqA4dNj8"
 
-  plug Slime2html.Router
+  plug SlimeConverter.Router
 end

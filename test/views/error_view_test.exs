@@ -1,21 +1,21 @@
-defmodule Slime2html.ErrorViewTest do
-  use Slime2html.ConnCase, async: true
+defmodule SlimeConverter.ErrorViewTest do
+  use SlimeConverter.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.html" do
-    assert render_to_string(Slime2html.ErrorView, "404.html", []) ==
+    assert render_to_string(SlimeConverter.ErrorView, "404.html", []) ==
            "Page not found"
   end
 
   test "render 500.html" do
-    assert render_to_string(Slime2html.ErrorView, "500.html", []) ==
+    assert render_to_string(SlimeConverter.ErrorView, "500.html", []) ==
            "Internal server error"
   end
 
   test "render any other" do
-    assert render_to_string(Slime2html.ErrorView, "505.html", []) ==
+    assert render_to_string(SlimeConverter.ErrorView, "505.html", []) ==
            "Internal server error"
   end
 end

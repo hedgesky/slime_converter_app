@@ -1,5 +1,5 @@
-defmodule Slime2html.Router do
-  use Slime2html.Web, :router
+defmodule SlimeConverter.Router do
+  use SlimeConverter.Web, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,13 +13,13 @@ defmodule Slime2html.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Slime2html do
+  scope "/", SlimeConverter do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
 
-  scope "/api", Slime2html do
+  scope "/api", SlimeConverter do
     pipe_through :api
 
     post "/slime2html", ApiController, :slime2html

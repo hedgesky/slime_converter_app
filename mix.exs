@@ -1,4 +1,4 @@
-defmodule Slime2html.Mixfile do
+defmodule SlimeConverter.Mixfile do
   use Mix.Project
 
   def project do
@@ -16,7 +16,7 @@ defmodule Slime2html.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Slime2html, []},
+    [mod: {SlimeConverter, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext]]
   end
 

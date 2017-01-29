@@ -1,4 +1,4 @@
-defmodule Slime2html.ErrorHelpers do
+defmodule SlimeConverter.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule Slime2html.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(Slime2html.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(SlimeConverter.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Slime2html.Gettext, "errors", msg, opts)
+      Gettext.dgettext(SlimeConverter.Gettext, "errors", msg, opts)
     end
   end
 end

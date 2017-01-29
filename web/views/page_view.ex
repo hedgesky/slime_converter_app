@@ -1,5 +1,5 @@
-defmodule Slime2html.PageView do
-  use Slime2html.Web, :view
+defmodule SlimeConverter.PageView do
+  use SlimeConverter.Web, :view
 
   def default_slime_input do
     """

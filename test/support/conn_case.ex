@@ -1,4 +1,4 @@
-defmodule Slime2html.ConnCase do
+defmodule SlimeConverter.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,15 +20,14 @@ defmodule Slime2html.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      import Slime2html.Router.Helpers
+      import SlimeConverter.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint Slime2html.Endpoint
+      @endpoint SlimeConverter.Endpoint
     end
   end
 
-  setup tags do
-
+  setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

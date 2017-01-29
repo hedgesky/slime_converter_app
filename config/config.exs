@@ -6,11 +6,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :slime2html, Slime2html.Endpoint,
+config :slime2html, SlimeConverter.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "L3iYEtEjIYzn/3CAeORhDRHuYDCGvRH229LXfz8WmHENx/Vl50QOuMrNlTU9uub3",
-  render_errors: [view: Slime2html.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Slime2html.PubSub,
+  render_errors: [view: SlimeConverter.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: SlimeConverter.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

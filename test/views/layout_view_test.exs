@@ -1,3 +1,3 @@
-defmodule Slime2html.LayoutViewTest do
-  use Slime2html.ConnCase, async: true
+defmodule SlimeConverter.LayoutViewTest do
+  use SlimeConverter.ConnCase, async: true
 end

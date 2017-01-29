@@ -1,5 +1,5 @@
-defmodule Slime2html.ApiControllerTest do
-  use Slime2html.ConnCase
+defmodule SlimeConverter.ApiControllerTest do
+  use SlimeConverter.ConnCase
 
   test "successful POST /api/slime2html", %{conn: conn} do
     slime = """

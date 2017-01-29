@@ -1,5 +1,5 @@
-defmodule Slime2html.ErrorView do
-  use Slime2html.Web, :view
+defmodule SlimeConverter.ErrorView do
+  use SlimeConverter.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

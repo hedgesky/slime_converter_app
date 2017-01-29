@@ -1,4 +1,4 @@
-# Slime2html
+# SlimeConverter
 
 To start your Phoenix app:
 
