@@ -1,0 +1,32 @@
+.site-header {
+  padding: 2em;
+  height: 13em;
+}
+
+.site-title {
+  margin: 0;
+}
+
+.header-content {
+  text-align: center;
+  color: #fff;
+}
+
+.main {
+  min-height: calc(100vh - 13em);
+  float: left;
+  width: 100%;
+}
+
+.CodeMirror {
+  height: 85vh;
+  border: 3px transparent solid;
+}
+.CodeMirror.error {
+  border-color: #b71c1c;
+}
+
+.section-title {
+  margin: 0.8em;
+  text-align: center;
+}
