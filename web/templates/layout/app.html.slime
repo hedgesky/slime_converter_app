@@ -13,13 +13,21 @@ html lang="en"
     link rel="icon" type="image/x-icon" href="/favicon.ico"
     link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"
     link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"
-  body
+  body.purple.lighten-3
     header.site-header.purple.darken-3
       .header-content
         h1.site-title
           | Slime Converter
         p.flow-text
           | Convert your Slime templates to EEx
-    main.main.purple.lighten-3
+    main.main
       .page-content
         = render(@view_module, @view_template, assigns)
+
+    footer.site-footer
+      .links
+        a.purple-text.text-darken-4 href="https://github.com/hedgesky/slime_converter_app"
+          | Our github repo
+        br
+        a.purple-text.text-darken-4 href="http://slime-lang.com/"
+          | Slime official site
