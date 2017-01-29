@@ -7,14 +7,14 @@ html lang="en"
     meta name="description" content=""
     meta name="author" content=""
 
-    title Slime2EEx
+    title Slime to EEx Converter
     link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
     link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
   body
     header.site-header.purple.darken-3
       .header-content
         h1.site-title
-          | Slime2EEx
+          | Slime Converter
         p.flow-text
           | Convert your Slime templates to EEx
     main.main.purple.lighten-3

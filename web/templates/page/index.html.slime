@@ -1,12 +1,14 @@
 .row
   .col.s6
-    h4.center-align.purple-text.text-darken-4 Slime input
+    h4.section-title.purple-text.text-darken-4 Slime input
     textarea#slime-input
       = default_slime_input()
   .col.s6
-    h4.center-align.purple-text.text-darken-4 EEx output
+    h4.section-title.purple-text.text-darken-4 EEx output
     textarea#html-output
       = default_html_output()
+/ add line to prevent trailing empty line in html code
 
 script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"
 script src="#{static_path(@conn, "/js/app.js")}"

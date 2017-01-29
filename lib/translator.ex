@@ -7,18 +7,16 @@ defmodule Translator do
         |> Indentifier.indentify
       { :ok, html }
     rescue
-      e in CompileError ->
+      e ->
         { :error, friendly_error_message(e) }
     end
   end
 
-  defp friendly_error_message(error) do
-    regex = ~r/undefined function (.+)\/./
-    Regex.replace(
-      regex,
-      error.description,
-      "Your template uses undefined function or variable '\\1'. Please remove it.",
-      global: false
-    )
+  defp friendly_error_message(%FunctionClauseError{module: Slime.Doctype}) do
+    "Invalid doctype"
+  end
+
+  defp friendly_error_message(e) do
+    inspect(e)
   end
 end

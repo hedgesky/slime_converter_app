@@ -13,7 +13,7 @@ defmodule Slime2html.PageView do
           ul
             = Enum.map [1, 2], fn x ->
               li = x
-    """
+    """ |> String.strip
   end
 
   def default_html_output do
