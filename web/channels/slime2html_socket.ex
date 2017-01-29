@@ -1,8 +1,8 @@
-defmodule SlimeConverter.UserSocket do
+defmodule SlimeConverter.ConverterSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", SlimeConverter.RoomChannel
+  channel "converter:*", SlimeConverter.ConverterChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

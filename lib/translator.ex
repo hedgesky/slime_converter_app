@@ -3,6 +3,7 @@ defmodule Translator do
     try do
       html =
         input
+        |> strip_or_empty
         |> Slime.Renderer.precompile
         |> Indentifier.indentify
       { :ok, html }
@@ -11,6 +12,9 @@ defmodule Translator do
         { :error, friendly_error_message(e) }
     end
   end
+
+  defp strip_or_empty(nil), do: ""
+  defp strip_or_empty(string), do: String.strip(string)
 
   defp friendly_error_message(%FunctionClauseError{module: Slime.Doctype}) do
     "Invalid doctype"

@@ -1,7 +1,7 @@
 defmodule SlimeConverter.Endpoint do
   use Phoenix.Endpoint, otp_app: :slime2html
 
-  socket "/socket", SlimeConverter.UserSocket
+  socket "/socket", SlimeConverter.ConverterSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
