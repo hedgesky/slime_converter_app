@@ -9,14 +9,16 @@ let input_mirror = CodeMirror.fromTextArea($("#slime-input").get()[0], {
   lineNumbers: true,
   theme: "material",
   mode: "application/x-slim",
-  autofocus: true
+  autofocus: true,
+  tabSize: 2
 })
 
 let output_mirror = CodeMirror.fromTextArea($("#html-output").get()[0], {
   lineNumbers: true,
   theme: "material",
   mode: "application/x-erb",
-  readOnly: true
+  readOnly: true,
+  tabSize: 2
 })
 let $output_mirror_el = $(output_mirror.getWrapperElement())
 
