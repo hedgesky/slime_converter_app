@@ -1,7 +1,7 @@
 defmodule SlimeConverter.ConverterChannel do
   use Phoenix.Channel
 
-  def join("converter:example_token", _message, socket) do
+  def join("slime2html", _message, socket) do
     {:ok, socket}
   end
 

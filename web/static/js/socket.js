@@ -54,7 +54,7 @@ let socket = new Socket("/socket", {})
 socket.connect()
 
 // Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("converter:example_token", {})
+let channel = socket.channel("slime2html", {})
 channel.join()
   .receive("ok", resp => { console.log("Connection established") })
   .receive("error", resp => { console.log("Connection failed") })

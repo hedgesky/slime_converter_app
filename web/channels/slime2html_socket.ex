@@ -2,7 +2,7 @@ defmodule SlimeConverter.ConverterSocket do
   use Phoenix.Socket
 
   ## Channels
-  channel "converter:*", SlimeConverter.ConverterChannel
+  channel "slime2html", SlimeConverter.ConverterChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
