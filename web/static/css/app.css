@@ -1,6 +1,9 @@
 .site-header {
   padding: 2em;
-  height: 13em;
+}
+
+.site-header .flow-test {
+  margin-bottom: 0;
 }
 
 .site-title {
