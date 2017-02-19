@@ -31,3 +31,5 @@ html lang="en"
         br
         a.purple-text.text-darken-4 href="http://slime-lang.com/"
           | Slime official site
+
+    = include_analytics() |> raw
